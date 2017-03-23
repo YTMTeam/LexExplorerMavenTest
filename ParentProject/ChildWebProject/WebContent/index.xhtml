@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+<title>Example</title>
+</h:head> 
+<body> 
+	<h1>First part</h1>
+	<h:form>
+	<p:dataTable var="car" value="#{innerTable.a}">
+    <p:column headerText="BId" sortBy="#{car.b.someId}" filterBy="#{car.b.someId}">
+        <h:outputText value="#{car.b.someId}" />
+    </p:column>
+
+   <p:column headerText="BStr">
+        <h:outputText value="#{car.b.someString}" />
+    </p:column>
+
+   <p:column headerText="AID" sortBy="#{car.someId}" filterBy="#{car.someId}">
+        <h:outputText value="#{car.someId}" />
+    </p:column>
+
+   <p:column headerText="BSTR">
+        <h:outputText value="#{car.someString}" />
+    </p:column>
+</p:dataTable>
+</h:form>
+
+<p:commandButton value="Click me!"></p:commandButton>
+</body> 
+</html>
